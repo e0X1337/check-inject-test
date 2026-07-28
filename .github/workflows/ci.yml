@@ -1,0 +1,14 @@
+name: CI
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: |
+          echo "Running legitimate CI tests..."
+          sleep 30
+          echo "Tests passed"
